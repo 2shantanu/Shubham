@@ -1,0 +1,12 @@
+package com.roadandfields;
+
+import org.openqa.selenium.WebDriver;
+
+public class Test1 {
+
+	public void main() {
+	
+		WebDriver driver = BrowserFactory.openBrowser("firefox", "http://roadandfields.com");
+}
+	
+}

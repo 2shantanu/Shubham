@@ -1,0 +1,16 @@
+package com.roadandfields;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import com.roadandfields.BrowserFactory;
+
+@Test
+public class AppTest(){
+	
+WebDriver driver = BrowserFactory.openBrowser("firefox", "https://roadandfields.com");
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+}
