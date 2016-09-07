@@ -1,0 +1,105 @@
+package com.roadandfields;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class CA {
+	private WebDriver driver;
+	
+	@FindBy(how=How.ID, using="our-products")
+	private WebElement ShopSkincare;
+	
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="ALL PRODUCTS")
+	private WebElement allProducts;
+	
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="BECOME A CONSULTANT")
+	private WebElement becomeAConsultant;
+	
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="ENROLL NOW")
+	private WebElement enrollNow;
+
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="Rodan + Fields Policies and Procedures")
+	private WebElement policyAndProc;
+
+	@FindBy(how=How.ID, using="sponserparam")
+	private WebElement searchBox;
+	
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="SEARCH")
+	private WebElement searchButton;
+		
+	@FindBy(how=How.CLASS_NAME, using="refine-products-button")
+	private WebElement ProductsDropDown;
+	
+	@FindBy(how=How.XPATH, using=".//*[@id='quick-refine']/div[2]/div[1]/ul/li[1]/form/div/div[1]/div[2]/div")
+	private WebElement RedefineCheckBox;
+	
+	@FindBy(how=How.XPATH, using=".//*[@id='quick-refine']/div[2]/div[1]/ul/li[2]/form/div/div[1]/div[2]/div")
+	private WebElement ReverseCheckBox;
+	
+	@FindBy(how=How.XPATH, using=".//*[@id='quick-refine']/div[2]/div[2]/input")
+	private WebElement PriceDropDown;
+	
+	@FindBy(how=How.XPATH, using=".//*[@id='quick-refine']/div[2]/div[2]/ul/li[2]/form/div/div[1]/div[2]/div")
+	private WebElement CAD50199CheckBox;
+	
+	
+	
+	
+	@FindBy(how=How.XPATH, using="//input[@class='typeahead-dep-city input-md form-control field-transparent tt-input']")
+	private WebElement cityName;
+	
+	@FindBy(how=How.PARTIAL_LINK_TEXT, using="Search Holidays")
+	private WebElement searchHolidaysButton;
+	
+	//Constructor
+	  public CA(WebDriver driver){
+	       this.driver=driver;
+
+	       //Initialize Elements
+	       PageFactory.initElements(driver, this);
+	   }
+	
+	public void allProductsClick(){
+		ShopSkincare.click();
+		allProducts.click();
+	}
+	
+	public void productsDropDown() throws InterruptedException{
+		ProductsDropDown.click();
+		Thread.sleep(3000);
+		RedefineCheckBox.click();
+		Thread.sleep(3000);
+		ProductsDropDown.click();
+		Thread.sleep(3000);
+		ReverseCheckBox.click();
+	}
+	
+	public void priceDropDown() throws InterruptedException{
+		PriceDropDown.click();
+		Thread.sleep(3000);
+		CAD50199CheckBox.click();
+	}
+	
+	public void becomeAConsultantClick() throws InterruptedException{
+		becomeAConsultant.click();
+		Thread.sleep(3000);
+		enrollNow.click();
+		Thread.sleep(3000);
+
+		String windowHandle1 = driver.getWindowHandle();
+
+		policyAndProc.click();
+		Thread.sleep(3000);
+		driver.switchTo().window(windowHandle1);
+		searchBox.click();		
+		searchBox.sendKeys("Shantanu");
+		searchButton.click();
+	}
+	
+}

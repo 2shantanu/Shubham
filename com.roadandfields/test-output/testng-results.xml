@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44883" started-at="2016-09-02T09:08:34Z" finished-at="2016-09-02T09:09:18Z">
+  <suite name="TestSuite" duration-ms="220062" started-at="2016-09-07T09:47:13Z" finished-at="2016-09-07T09:50:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44883" started-at="2016-09-02T09:08:34Z" finished-at="2016-09-02T09:09:18Z">
-      <class name="com.roadandfields.Test2">
-        <test-method status="FAIL" signature="main()[pri:0, instance:com.roadandfields.Test2@3c756e4d]" test-instance-name="" name="main" duration-ms="44849" started-at="2016-09-02T14:38:34Z" finished-at="2016-09-02T14:39:18Z">
+    <test name="Test suite 1" duration-ms="220062" started-at="2016-09-07T09:47:13Z" finished-at="2016-09-07T09:50:53Z">
+      <class name="com.roadandfields.tests.Test2">
+        <test-method status="PASS" signature="main()[pri:0, instance:com.roadandfields.tests.Test2@548b7f67]" test-instance-name="" name="main" duration-ms="219996" started-at="2016-09-07T15:17:13Z" finished-at="2016-09-07T15:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+      </class> <!-- com.roadandfields.tests.Test2 -->
+      <class name="com.roadandfields.tests.Test1">
+        <test-method status="FAIL" signature="main()[pri:0, instance:com.roadandfields.tests.Test1@573f2bb1]" test-instance-name="" name="main" duration-ms="69970" started-at="2016-09-07T15:17:13Z" finished-at="2016-09-07T15:18:23Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"partial link text","selector":"SEARCH"}
-Command duration or timeout: 20.25 seconds
+              <![CDATA[Unable to locate element: {"method":"partial link text","selector":"ALL PRODUCTS"}
+Command duration or timeout: 20.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'NODE380', ip: '10.210.1.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'NODE380', ip: '11.16.10.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=39.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 989aecfc-127c-4f07-a50c-7093ea2869f7
-*** Element info: {Using=partial link text, value=SEARCH}]]>
+Session ID: 4dc93421-cbaa-4614-ad44-0ad6a68ae11c
+*** Element info: {Using=partial link text, value=ALL PRODUCTS}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"partial link text","selector":"SEARCH"}
-Command duration or timeout: 20.25 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"partial link text","selector":"ALL PRODUCTS"}
+Command duration or timeout: 20.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'NODE380', ip: '10.210.1.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'NODE380', ip: '11.16.10.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=39.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 989aecfc-127c-4f07-a50c-7093ea2869f7
-*** Element info: {Using=partial link text, value=SEARCH}
+Session ID: 4dc93421-cbaa-4614-ad44-0ad6a68ae11c
+*** Element info: {Using=partial link text, value=ALL PRODUCTS}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -44,8 +50,8 @@ Session ID: 989aecfc-127c-4f07-a50c-7093ea2869f7
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy5.click(Unknown Source)
-	at com.roadandfields.CA.becomeAConsultantClick(CA.java:98)
-	at com.roadandfields.Test2.main(Test2.java:19)
+	at com.roadandfields.pages.CAPage.allProductsClick(CAPage.java:53)
+	at com.roadandfields.tests.Test1.main(Test1.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -56,34 +62,23 @@ Session ID: 989aecfc-127c-4f07-a50c-7093ea2869f7
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"partial link text","selector":"SEARCH"}
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"partial link text","selector":"ALL PRODUCTS"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'NODE380', ip: '10.210.1.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'NODE380', ip: '11.16.10.97', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/admin/AppData/Local/Temp/anonymous1649627687241022902webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/admin/AppData/Local/Temp/anonymous1649627687241022902webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/admin/AppData/Local/Temp/anonymous1439313070874995362webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/admin/AppData/Local/Temp/anonymous1439313070874995362webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-      </class> <!-- com.roadandfields.Test2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.roadandfields.tests.Test1 -->
+    </test> <!-- Test suite 1 -->
+  </suite> <!-- TestSuite -->
 </testng-results>

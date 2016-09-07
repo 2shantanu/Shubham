@@ -3,16 +3,17 @@
 <suite name="Failed suite [Suite1]">
   <test name="Test suite 1">
     <classes>
-      <class name="com.roadandfields.Test1"/>
+      <class name="com.roadandfields.tests.Test1"/>
+      <class name="com.roadandfields.tests.Test2"/>
     </classes>
   </test> <!-- Test suite 1 -->
   <test name="Test suite 1(failed)">
     <classes>
-      <class name="com.roadandfields.Test1">
+      <class name="com.roadandfields.tests.Test2">
         <methods>
           <include name="main"/>
         </methods>
-      </class> <!-- com.roadandfields.Test1 -->
+      </class> <!-- com.roadandfields.tests.Test2 -->
     </classes>
   </test> <!-- Test suite 1(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

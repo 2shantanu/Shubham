@@ -1,0 +1,36 @@
+package com.roadandfields.tests;
+
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.roadandfields.pages.CA;
+import com.roadandfields.util.BrowserFactory;
+
+@Test
+public class Test2 {
+	
+	public void main() throws InterruptedException {
+	WebDriver driver = BrowserFactory.openBrowser("firefox", "https://www.rodanandfields.com/ca/");
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+	//Click All Product link
+	CA CAPage= new CA(driver);
+	CAPage.becomeAConsultantClick();
+	
+	//switch to window
+    //ArrayList<String> window1 = new ArrayList<String> (driver.getWindowHandles());
+	//driver.switchTo().window(window1.get(1));
+	
+	
+
+	
+	
+	
+	
+	
+	}
+}

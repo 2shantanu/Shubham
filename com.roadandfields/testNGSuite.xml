@@ -1,9 +1,9 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite1" verbose="1" >
+<suite name="TestSuite" thread-count="2" parallel="classes" >
   <test name="Test suite 1" >
     <classes>
-      <class name="com.roadandfields.Test1"/>
+      <class name="com.roadandfields.tests.Test1"/>
+      <class name="com.roadandfields.tests.Test2"/>
     </classes>
  </test>
 </suite>
